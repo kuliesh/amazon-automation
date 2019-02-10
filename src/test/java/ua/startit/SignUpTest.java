@@ -18,11 +18,13 @@ import java.util.regex.Pattern;
 
 public class SignUpTest extends BaseTest {
 
-    private static final String FIRST_NAME = "Some";
+    public static final String FIRST_NAME = "Some";
     private static final String LAST_NAME = "name";
     private static final String USERNAME = FIRST_NAME + " " + LAST_NAME;
     public static final String PASSWORD = "qwerty";
     public static final String EMAIL_ADDRESS = "verifaev+%s@gmail.com";
+
+    static String formatedEmailAddress;
 
     private EmailService emailService;
 
@@ -45,7 +47,7 @@ public class SignUpTest extends BaseTest {
         signUpPage.setPassword(PASSWORD);
         signUpPage.setPasswordCheck(PASSWORD);
         String uuid = UUID.randomUUID().toString();
-        signUpPage.setEmail(String.format(EMAIL_ADDRESS, uuid));
+        signUpPage.setEmail(formatedEmailAddress = String.format(EMAIL_ADDRESS, uuid));
 
         VerifyEmailAddressPage verifyPage = signUpPage.clickToCreateNewAccount();
         String code = getCode(uuid);

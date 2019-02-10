@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <!--init driver-->
-<suite name="Smoke">
+<suite name="Smoke" verbose="2" annotations="JDK">
 
     <!--<groups>-->
         <!--<run>-->
@@ -19,10 +19,18 @@
     <!--</test>-->
 
     <!--init driver-->
-    <test name="Sign up and Sign in">
+    <test name="Sign up and Sign in" preserve-order="true" >
         <classes>
             <class name="ua.startit.SignUpTest"/>
             <class name="ua.startit.SignInTest"/>
         </classes>
     </test>
+
+    <test name="Other" preserve-order="false" >
+        <classes>
+            <class name="ua.startit.SearchTest"/>
+        </classes>
+    </test>
 </suite>
+
+
