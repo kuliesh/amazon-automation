@@ -8,9 +8,7 @@ import ua.startit.pageobjects.HomePage;
 
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
-import static ua.startit.SignUpTest.EMAIL_ADDRESS;
-import static ua.startit.SignUpTest.FIRST_NAME;
-import static ua.startit.SignUpTest.PASSWORD;
+import static ua.startit.SignUpTest.*;
 
 public class SignInTest extends BaseTest {
 
@@ -54,11 +52,11 @@ public class SignInTest extends BaseTest {
 
     @Test
     public void signTest() {
-        open("/");
+       // open("/");
         HomePage homePage = new HomePage();
         homePage
                 .clickOnSignIn()
-                .setUsername(EMAIL_ADDRESS)
+                .setUsername(formatedEmailAddress)
                 .setPassword(PASSWORD);
 
         Assert.assertTrue(homePage.isNameDisplayed(FIRST_NAME),
