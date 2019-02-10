@@ -31,7 +31,7 @@
                         <properties>
                             <property>
                                 <name>testnames</name>
-                                <value>SignUpTest,SignInTest</value>
+                                <value>test1,test2</value>
                             </property>
                         </properties>
                     </configuration>

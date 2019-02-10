@@ -19,14 +19,14 @@
     <!--</test>-->
 
     <!--init driver-->
-    <test name="Sign up and Sign in" preserve-order="true" >
+    <test name="test1" preserve-order="true" >
         <classes>
             <class name="ua.startit.SignUpTest"/>
             <class name="ua.startit.SignInTest"/>
         </classes>
     </test>
 
-    <test name="Other" preserve-order="false" >
+    <test name="test2" preserve-order="false" >
         <classes>
             <class name="ua.startit.SearchTest"/>
         </classes>
